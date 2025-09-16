@@ -1,0 +1,46 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.modal-box {
+  background: #e60000; /* erős piros */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  color: white; /* fehér szöveg */
+}
+
+.modal-box h2 {
+  margin: 0 0 20px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #e60000;
+  font-weight: bold;
+  font-family: 'Space Grotesk', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #f2f2f2;
+}

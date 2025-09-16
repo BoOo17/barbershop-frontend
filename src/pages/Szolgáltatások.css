@@ -1,0 +1,48 @@
+.services-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.services-container h1 {
+  margin-bottom: 30px;
+}
+
+.services-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  background: #464646;
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+
+.service-name {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+}
+
+.service-price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.service-time {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: middle;
+}

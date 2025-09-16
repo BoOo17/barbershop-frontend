@@ -1,0 +1,54 @@
+/* Header alap stílus */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #222;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Navigációs linkek */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Linkek stílusa */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effekt csak a linkekre */
+.nav-link:hover {
+  background-color: rgba(64, 64, 64, 0.856);
+  color: rgb(0, 150, 215);
+}
+
+/* Fiók ikon külön */
+.account-icon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+/* Kis animáció hoverre, de szín nem változik */
+.account-icon:hover {
+  transform: scale(1.1);
+}

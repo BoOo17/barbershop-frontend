@@ -1,0 +1,130 @@
+/* Háttér overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal doboz */
+.modal {
+  background: rgb(65, 65, 65);
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Cím */
+.modal h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Input mezők */
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Vezetéknév + keresztnév egymás mellett */
+.name-fields {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+/* Gomb */
+.modal button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal button[type="submit"]:hover:enabled {
+  background-color: darkorange;
+}
+
+.modal button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Elfelejtett jelszó */
+.forgot-password {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fc1b1b;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Váltás regisztráció ↔ belépés */
+.switch {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.switch span {
+  color: orange;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.switch span:hover {
+  text-decoration: underline;
+}
+
+/* Bezáró gomb */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.close-btn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(133, 133, 133) !important;
+}

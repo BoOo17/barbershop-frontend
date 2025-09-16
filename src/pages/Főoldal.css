@@ -1,0 +1,93 @@
+.home-container {
+  text-align: center;
+  margin-top: 120px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  color: #c8c8c8;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 110px;
+}
+
+/* Nagyobb fő gomb */
+.main-btn {
+  width: 350px;
+  padding: 25px;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+  background-color: rgb(252, 156, 0);
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  background-color: rgb(168, 92, 0) !important;
+  color: #ffffff;
+}
+
+/* Kisebb másodlagos gomb */
+.secondary-btn {
+  width: 220px;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: rgba(255, 68, 0, 0.827);
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background-color: #9a0000 !important;
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup doboz */
+.popup {
+  background: red;
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  text-align: center;
+  min-width: 350px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* Bejelentkezés link */
+.popup-login {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.popup-login:hover {
+  color: #ffdede;
+}

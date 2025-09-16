@@ -1,0 +1,47 @@
+.barberek-container {
+  text-align: center;
+  padding: 40px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+}
+
+.barber-list {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.barber-card {
+  background: #00c8d6;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff;
+}
+
+.barber-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.barber-card h2 {
+  margin: 14px 0;
+  font-size: 28px;
+}
+
+.barber-card p {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.barber-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
