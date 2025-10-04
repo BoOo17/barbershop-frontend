@@ -4,11 +4,31 @@
   padding: 20px;
   font-family: 'Space Grotesk', sans-serif;
   text-align: center;
-  color: white;
+  background: linear-gradient(145deg, #2e2e2e, #1c1c1c);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .services-container h1 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(77, 166, 255, 0.6),
+               0 0 20px rgba(77, 166, 255, 0.3);
+}
+
+.services-container h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #4da6ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .services-table {
@@ -20,29 +40,68 @@
 .service-row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: #464646;
-  padding: 15px 20px;
-  border-radius: 8px;
-  transition: 0.3s;
+  padding: 18px 22px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
 }
 
+.service-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+  background: #555555;
+  border: 2px solid #4da6ff;
+}
 
 .service-name {
   font-weight: 500;
   font-size: 20px;
   text-align: left;
+  color: #ffffff;
+  position: relative;
+  padding-left: 32px;
+}
+
+.service-row:nth-child(1) .service-name::before {
+  content: "✂️";
+  position: absolute;
+  left: 0;
+}
+.service-row:nth-child(2) .service-name::before {
+  content: "🧔";
+  position: absolute;
+  left: 0;
+}
+.service-row:nth-child(3) .service-name::before {
+  content: "💈";
+  position: absolute;
+  left: 0;
+}
+.service-row:nth-child(4) .service-name::before {
+  content: "🎨";
+  position: absolute;
+  left: 0;
+}
+.service-row:nth-child(5) .service-name::before {
+  content: "💈";
+  position: absolute;
+  left: 0;
 }
 
 .service-price {
   font-weight: bold;
   font-size: 18px;
-  color: #ffffff;
+  color: #4da6ff;
   text-align: right;
+  text-shadow: 0 0 8px rgba(77, 166, 255, 0.6);
 }
 
 .service-time {
-    font-weight: bold;
-    font-size: 18px;
-    color: #ffffff;
-    text-align: middle;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
 }
