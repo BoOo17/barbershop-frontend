@@ -1,37 +1,15 @@
 import React from "react";
+import "./rolunk.css";
 
-function Rólunk() {
+function Rolunk() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>Rólunk</h1>
-      <p style={styles.text}>
-        Mi vagyunk a Barbershop csapata 💈. Professzionális hajvágással és borotválással várjuk vendégeinket.
-      </p>
-      <p style={styles.text}>
-        Küldetésünk, hogy minden vendég magabiztosan és stílusosan távozzon tőlünk.
+    <div className="rolunk-container">
+      <h1 className="rolunk-title">Üzletünk bemutatkozása:</h1>
+      <p className="rolunk-text">
+        Üdvözlünk a Barbershop világában, ahol a stílus és a precizitás találkozik. Üzletünk 2015-ben nyitotta meg kapuit, azóta a város egyik legkedveltebb barbershopja lett. Célunk, hogy minden vendégünk ne csak jól nézzen ki, hanem magabiztosan is érezze magát. Csapatunk elkötelezett a modern és klasszikus hajvágási technikák mellett, mindig figyelve a részletekre és a személyre szabott stílusra. Látogass el hozzánk, és tapasztald meg, hogy a hajvágás nem csupán szolgáltatás, hanem élmény is lehet. Professzionális hajvágással és borotválással várjuk vendégeinket, küldetésünk, hogy minden vendég magabiztosan és stílusosan távozzon tőlünk.
       </p>
     </div>
   );
 }
 
-const styles = {
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    paddingTop: "50px",
-    textAlign: "center",
-    gap: "15px",
-  },
-  title: {
-    fontSize: "28px",
-    fontWeight: "bold",
-  },
-  text: {
-    fontSize: "18px",
-    maxWidth: "600px",
-    lineHeight: "1.5",
-  },
-};
-
-export default Rólunk;
+export default Rolunk;
