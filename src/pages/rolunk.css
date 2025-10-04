@@ -1,0 +1,22 @@
+.rolunk-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #555555, #3d3d3d);
+  font-family: 'Space Grotesk', sans-serif;
+  color: rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.rolunk-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff;
+  border-bottom: 3px solid #4da6ff;
+  padding-bottom: 6px;
+  width: fit-content;
+}
