@@ -6,9 +6,9 @@ import Header from "./components/Header";
 import Főoldal from "./pages/Főoldal";
 import Barberek from "./pages/Barberek";
 import Szolgáltatások from "./pages/Szolgáltatások";
-import Képek from "./pages/Képek";
-import Rólunk from "./pages/Rólunk";
-import Elérhetőségek from "./pages/Elérhetőségek";
+import Kepek from "./pages/Kepek";
+import Rolunk from "./pages/Rolunk";
+import Elerhetosegek from "./pages/Elerhetosegek";
 
 function App() {
   return (
@@ -18,12 +18,13 @@ function App() {
         <Route path="/" element={<Főoldal />} />
         <Route path="/barberek" element={<Barberek />} />
         <Route path="/szolgaltatasok" element={<Szolgáltatások />} />
-        <Route path="/kepek" element={<Képek />} />
-        <Route path="/rolunk" element={<Rólunk />} />
-        <Route path="/elerhetosegek" element={<Elérhetőségek />} />
+        <Route path="/kepek" element={<Kepek />} />
+        <Route path="/rolunk" element={<Rolunk />} />
+        <Route path="/elerhetosegek" element={<Elerhetosegek />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
