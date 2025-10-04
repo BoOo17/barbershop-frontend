@@ -1,0 +1,31 @@
+.elerhetosegek-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  background: linear-gradient(145deg, #555555, #3d3d3d);
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 20px;
+}
+
+.elerhetosegek-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;  
+  animation: floatPulse 3s ease-in-out infinite;
+}
+
+@keyframes floatPulse {
+  0%   { transform: translateY(0); opacity: 0.95; }
+  50%  { transform: translateY(-6px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.95; }
+}
+
+.elerhetosegek-text {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #ffffff; 
+}
