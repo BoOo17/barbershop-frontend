@@ -1,130 +1,168 @@
-/* Háttér overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(53, 53, 53, 0.911);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
 }
 
-/* Modal doboz */
-.modal {
-  background: rgb(65, 65, 65);
-  padding: 25px;
-  border-radius: 10px;
-  width: 400px;
-  max-width: 90%;
+.modal-content {
+  background-color: #c6c6c6;
+  /* Kisebb belső margó a kompaktságért */
+  padding: 30px; 
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
   position: relative;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-/* Cím */
-.modal h2 {
-  margin-bottom: 20px;
+  box-shadow: 0 10px 30px #f39c12;
   text-align: center;
+  color: #ffffff;
+  z-index: 10000;
+  animation: popIn 0.3s ease-out;
+
+  max-height: 85vh; 
+  overflow-y: auto;
 }
 
-/* Input mezők */
-.modal input[type="text"],
-.modal input[type="email"],
-.modal input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: #5b5b5b;
+  border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
-/* Vezetéknév + keresztnév egymás mellett */
-.name-fields {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  margin-bottom: 12px;
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
-.name-fields input {
-  flex: 1;
-}
-
-/* Checkbox */
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  margin: 12px 0;
-}
-
-/* Gomb */
-.modal button[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  background-color: orange;
-  color: black;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.modal button[type="submit"]:hover:enabled {
-  background-color: darkorange;
-}
-
-.modal button[type="submit"]:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-/* Elfelejtett jelszó */
-.forgot-password {
-  margin-top: 10px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #fc1b1b;
-  cursor: pointer;
-  text-align: center;
-}
-
-/* Váltás regisztráció ↔ belépés */
-.switch {
-  margin-top: 15px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.switch span {
-  color: orange;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.switch span:hover {
-  text-decoration: underline;
-}
-
-/* Bezáró gomb */
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 12px;
+  top: 15px;
+  right: 15px;
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: 24px;
+  font-weight: bold;
   cursor: pointer;
   color: #ffffff;
+  line-height: 1;
+  z-index: 10; /* Hogy görgetéskor is kattintható maradjon */
 }
 
 .close-btn:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(133, 133, 133) !important;
+  color: #f39c12;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.auth-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.name-row {
+  display: flex;
+  gap: 10px;
+}
+
+.name-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 0.85rem; 
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px; 
+  border: 2px solid #fefeff;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #585858;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #222;
+  background-color: #fff;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: #fceae9;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: 1px solid #e74c3c;
+}
+
+.login-btn {
+  background-color: #424242a8;
+  color: rgb(212, 212, 212);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #545454 !important;
+}
+
+.switch-text {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #666;
+  padding-bottom: 5px;
+}
+
+.link {
+  color: #f39c12;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #222;
+  text-decoration: underline;
 }

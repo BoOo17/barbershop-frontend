@@ -1,56 +1,42 @@
-import React, { useState } from "react";
-import "./Főoldal.css";
-import AuthModal from "../components/AuthModal";
+import React from 'react';
+import './Főoldal.css';
 
-function Főoldal() {
-  const [popupVisible, setPopupVisible] = useState(false);
-  const [authModalOpen, setAuthModalOpen] = useState(false);
-
-  const handleBookingClick = () => {
-    setPopupVisible(true);
-  };
-
+const Főoldal = ({ onOpenAuth }) => {
   return (
-    <div className="home-container">
-      <h1>Üdvözlünk a BarberShopban!</h1>
+    <div className="hero-container">
+      
+      {/* Sötétítő réteg a háttérkép felett */}
+      <div className="hero-overlay"></div>
 
-      <div className="buttons">
-        <button className="main-btn" onClick={handleBookingClick}>
-          Foglalj időpontot
-        </button>
-        <button className="secondary-btn" onClick={handleBookingClick}>
-          Időpont lemondása
-        </button>
+      <div className="hero-content">
+        {/* Kicsi díszítő szöveg felül */}
+        <span className="hero-badge">EST. 2025 • GYŐR</span>
+        
+        {/* A fő üzenet */}
+        <h1>
+          A stílus <span className="highlight">örök</span>.<br />
+          A vágás <span className="highlight">tökéletes</span>.
+        </h1>
+        
+        <p className="hero-subtitle">
+          Professzionális barber szolgáltatások, ahol a hagyomány találkozik a modern trendekkel.
+          Dőlj hátra, mi gondoskodunk a megjelenésedről.
+        </p>
+
+        {/* A KÉT GOMB (Megtartva és bekötve) */}
+        <div className="hero-buttons">
+          <button className="btn-primary" onClick={onOpenAuth}>
+            Időpontfoglalás
+          </button>
+          
+          <button className="btn-secondary" onClick={onOpenAuth}>
+            Időpont lemondása
+          </button>
+        </div>
       </div>
 
-      {/* Piros popup overlay */}
-      {popupVisible && (
-        <div
-          className="popup-overlay"
-          onClick={() => setPopupVisible(false)}
-        >
-          <div
-            className="popup"
-            onClick={(e) => e.stopPropagation()} // megakadályozza, hogy a belső kattintás bezárja
-          >
-            <p>Bejelentkezés szükséges!</p>
-            <span
-              className="popup-login"
-              onClick={() => {
-                setPopupVisible(false);
-                setAuthModalOpen(true);
-              }}
-            >
-              Bejelentkezés
-            </span>
-          </div>
-        </div>
-      )}
-
-      {/* AuthModal */}
-      <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
     </div>
   );
-}
+};
 
 export default Főoldal;

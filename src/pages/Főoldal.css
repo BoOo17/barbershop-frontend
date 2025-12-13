@@ -1,93 +1,157 @@
-.home-container {
-  text-align: center;
-  margin-top: 120px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 20px;
-  color: #c8c8c8;
-}
 
-.buttons {
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Teljes képernyő magasság */
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
   align-items: center;
-  margin-top: 110px;
+  text-align: center;
+  color: white;
+  
+  /* HÁTTÉRKÉP BEÁLLÍTÁSA */
+  /* Ha van képed az assets mappában, írd át az útvonalat! */
+  /* Ha nincs kép, ez a sötét szín marad */
+  background: #222 url('../assets/hero-bg.jpg') no-repeat center center/cover;
+  
+  /* Hogy ne csússzon el a fejléc miatt */
+  margin-top: -80px; 
+  padding-top: 80px;
 }
 
-/* Nagyobb fő gomb */
-.main-btn {
-  width: 350px;
-  padding: 25px;
-  font-size: 25px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: bold;
-  background-color: rgb(252, 156, 0);
-  color: rgb(255, 255, 255);
-  transition: 0.3s;
-}
-
-.main-btn:hover {
-  background-color: rgb(168, 92, 0) !important;
-  color: #ffffff;
-}
-
-/* Kisebb másodlagos gomb */
-.secondary-btn {
-  width: 220px;
-  padding: 14px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Space Grotesk', sans-serif;
-  background-color: rgba(255, 68, 0, 0.827);
-  color: rgb(255, 255, 255);
-  transition: 0.3s;
-}
-
-.secondary-btn:hover {
-  background-color: #9a0000 !important;
-}
-
-/* Popup overlay */
-.popup-overlay {
-  position: fixed;
+/* Sötétítő réteg (Overlay) - Hogy olvasható legyen a szöveg */
+.hero-overlay {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(97, 97, 97, 0.6), rgba(94, 94, 94, 0.8));
+  z-index: 1;
 }
 
-/* Popup doboz */
-.popup {
-  background: red;
-  color: white;
-  padding: 40px;
-  border-radius: 12px;
-  font-size: 20px;
-  text-align: center;
-  min-width: 350px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+/* A tartalom doboza (hogy a réteg felett legyen) */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeInUp 1s ease-out; /* Beúszó animáció */
 }
 
-/* Bejelentkezés link */
-.popup-login {
-  display: block;
-  margin-top: 15px;
-  color: white;
+/* Díszítő felirat */
+.hero-badge {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: #f39c12; /* Arany szín */
+  margin-bottom: 20px;
   font-weight: bold;
-  cursor: pointer;
-  font-size: 14px;
+  border-bottom: 1px solid #f39c12;
+  padding-bottom: 5px;
 }
 
-.popup-login:hover {
-  color: #ffdede;
+/* Főcím */
+h1 {
+  font-size: 3.5rem; /* Hatalmas betűk */
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  color: #f39c12; /* Arany kiemelés a szövegben */
+}
+
+/* Alcím */
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 40px;
+  font-weight: 300;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- GOMBOK --- */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 1. Elsődleges gomb (Foglalás) - Tele színnel */
+.btn-primary {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background-color: #e67e22;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+}
+
+/* 2. Másodlagos gomb (Lemondás) - Átlátszó, kerettel */
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.3);
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn-secondary:hover {
+  border-color: #fff;
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Beúszó animáció definíciója */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobil nézet */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
 }

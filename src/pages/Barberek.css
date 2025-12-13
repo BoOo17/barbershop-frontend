@@ -1,47 +1,137 @@
-.barberek-container {
+/* src/pages/Barberek.css */
+
+.barbers-container {
+  width: 100%;
+  max-width: 1100px; /* Kicsit szélesebb engedélyezése */
+  margin: 0 auto;
   text-align: center;
-  padding: 40px;
-  font-family: 'Space Grotesk', sans-serif;
-  color: white;
 }
 
-.barber-list {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.barber-card {
-  background: #00c8d6;
-  padding: 20px;
-  border-radius: 12px;
-  width: 220px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #ffffff;
-}
-
-.barber-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+.barbers-container h2 {
+  font-size: 3rem; /* Nagyobb cím */
   margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
-.barber-card h2 {
-  margin: 14px 0;
-  font-size: 28px;
+.subtitle {
+  color: #ddd;
+  margin-bottom: 60px; /* Nagyobb hely a cím és a kártyák között */
+  font-size: 1.2rem;
 }
 
-.barber-card p {
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: bold;
+.barbers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* MEGNOVELVE: Nagyobb hely a kártyák között */
+}
+
+/* --- KÁRTYA STÍLUS --- */
+.barber-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 50px; /* MEGNOVELVE: Nagyobb belső térköz, ettől "hízik" a kártya */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Erősebb árnyék */
+  transition: transform 0.3s ease;
+  text-align: left;
+  position: relative; /* A gomb pozicionálásához */
 }
 
 .barber-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+}
+
+.barber-image-wrapper {
+  flex-shrink: 0;
+  margin-right: 50px; /* Nagyobb távolság a kép és a szöveg között */
+}
+
+.barber-img {
+  width: 180px; /* MEGNOVELVE: Nagyobb kép */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #f39c12;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.barber-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* Hogy a gomb alulra kerüljön */
+  justify-content: center;
+}
+
+.barber-info h3 {
+  margin: 0;
+  font-size: 2.2rem; /* Nagyobb név */
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.role {
+  display: block;
+  font-size: 1rem;
+  color: #f39c12;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+}
+
+.barber-info p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin: 0 0 25px 0; /* Hely a szöveg és a gomb között */
+  max-width: 600px; /* Hogy ne legyen túl hosszú a sor */
+}
+
+/* --- ÚJ GOMB STÍLUSA --- */
+.book-barber-btn {
+  background-color: #222; /* Fekete gomb */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  align-self: flex-start; /* Balra igazítjuk a gombot */
+  transition: all 0.3s ease;
+  border: 2px solid #222;
+}
+
+.book-barber-btn:hover {
+  background-color: transparent; /* Átlátszó lesz */
+  color: #f39c12; /* Fekete szöveg */
+  transform: scale(1.05);
+}
+
+/* --- MOBIL NÉZET --- */
+@media (max-width: 768px) {
+  .barber-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .barber-image-wrapper {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .barber-img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .book-barber-btn {
+    align-self: center; /* Mobilon középen legyen a gomb */
+    width: 100%; /* És teljes szélességű */
+  }
 }

@@ -1,15 +1,45 @@
-import React from "react";
-import "./rolunk.css";
+// src/pages/Rolunk.jsx
+import React from 'react';
+import './Rolunk.css';
 
-function Rolunk() {
+const Rolunk = () => {
   return (
     <div className="rolunk-container">
-      <h1 className="rolunk-title">Üzletünk bemutatkozása:</h1>
-      <p className="rolunk-text">
-        Üdvözlünk a Barbershop világában, ahol a stílus és a precizitás találkozik. Üzletünk 2015-ben nyitotta meg kapuit, azóta a város egyik legkedveltebb barbershopja lett. Célunk, hogy minden vendégünk ne csak jól nézzen ki, hanem magabiztosan is érezze magát. Csapatunk elkötelezett a modern és klasszikus hajvágási technikák mellett, mindig figyelve a részletekre és a személyre szabott stílusra. Látogass el hozzánk, és tapasztald meg, hogy a hajvágás nem csupán szolgáltatás, hanem élmény is lehet. Professzionális hajvágással és borotválással várjuk vendégeinket, küldetésünk, hogy minden vendég magabiztosan és stílusosan távozzon tőlünk.
-      </p>
+      
+      {/* CÍMSOR ÉS BEVEZETŐ */}
+      <div className="rolunk-header">
+        <h2>Kik Vagyunk?</h2>
+        <div className="divider-small"></div>
+        <p className="intro-text">
+          Nem csak egy fodrászat. Ez a hely, ahol a klasszikus stílus találkozik a modern technikával. 
+          Nálunk nem sietünk: dőlj hátra, és élvezd a gondoskodó kezek munkáját egy barátságos környezetben.
+        </p>
+      </div>
+
+      {/* 3 KÁRTYA A LÉNYEGRŐL */}
+      <div className="features-grid">
+        
+        <div className="feature-card">
+          <div className="icon-box">💈</div>
+          <h3>Tradíció</h3>
+          <p>A régi iskolát követjük: pengés borotválás, forró törölköző és precíz átmenetek.</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="icon-box">✂️</div>
+          <h3>Szakértelem</h3>
+          <p>Csapatunk folyamatosan képzi magát, hogy a legújabb trendeket is profin vágja.</p>
+        </div>
+
+        <div className="feature-card">
+          <div className="icon-box">🥃</div>
+          <h3>Hangulat</h3>
+          <p>Jó zene, kellemes társaság és kötetlen beszélgetések várnak.</p>
+        </div>
+
+      </div>
     </div>
   );
-}
+};
 
 export default Rolunk;

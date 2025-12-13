@@ -1,22 +1,108 @@
+/* src/pages/Rolunk.css */
+
 .rolunk-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 40px;
-  min-height: 100vh;
-  background: linear-gradient(145deg, #555555, #3d3d3d);
-  font-family: 'Space Grotesk', sans-serif;
-  color: rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
+  padding: 20px;
 }
 
-.rolunk-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #ffffff;
-  border-bottom: 3px solid #4da6ff;
-  padding-bottom: 6px;
-  width: fit-content;
+/* --- HEADER RÉSZ --- */
+.rolunk-header h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #222;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.divider-small {
+  width: 60px;
+  height: 4px;
+  background-color: #f39c12; /* Narancs díszcsík */
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 60px auto; /* Nagy hely a kártyák előtt */
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* --- A 3 KÁRTYA ELRENDEZÉSE --- */
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Hogy mobilon egymás alá kerüljenek */
+}
+
+/* --- EGY KÁRTYA STÍLUSA --- */
+.feature-card {
+  background-color: #fff; /* Fehér kártya */
+  flex: 1; /* Egyforma szélesek legyenek */
+  min-width: 280px; /* De ne legyenek túl vékonyak */
+  max-width: 350px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Finom árnyék */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* A lényeg: színes csík az alján */
+  border-bottom: 5px solid #f39c12; 
+}
+
+/* Hover effekt: felemelkedik */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Ikon a kártyában */
+.icon-box {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto; /* Középre igazítás */
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Mobil nézet */
+@media (max-width: 768px) {
+  .rolunk-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-card {
+    width: 100%;
+  }
 }

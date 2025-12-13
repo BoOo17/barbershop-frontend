@@ -1,31 +1,156 @@
-.elerhetosegek-container {
+/* src/pages/Elerhetosegek.css */
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.contact-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
-  height: 100vh;           
-  background: linear-gradient(145deg, #555555, #3d3d3d);
-  text-align: center;
-  font-family: 'Space Grotesk', sans-serif;
+  flex-wrap: wrap; /* Hogy mobilon egymás alá kerüljenek */
+  gap: 50px;
+  margin-bottom: 40px;
+  align-items: flex-start; /* Fentre igazítva */
+}
+
+/* --- BAL OSZLOP (INFÓK) --- */
+.info-column {
+  flex: 1; /* Foglalja el a hely felét */
+  min-width: 300px;
+}
+
+.info-column h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #f39c12; /* Arany cím */
+}
+
+.contact-desc {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  background: rgba(255,255,255,0.1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.info-item h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.info-item p {
+  margin: 0;
+  color: #ccc;
+}
+
+/* Nyitvatartás */
+.opening-hours {
+  margin-top: 30px;
+  background: rgba(255,255,255,0.05); /* Halvány háttér */
   padding: 20px;
+  border-radius: 10px;
 }
 
-.elerhetosegek-title {
-  font-size: 36px;
+.opening-hours h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #f39c12;
+}
+
+.opening-hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opening-hours li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 5px;
+}
+
+.opening-hours li:last-child {
+  border: none;
+}
+
+/* --- JOBB OSZLOP (TÉRKÉP) --- */
+.map-column {
+  flex: 1;
+  min-width: 300px;
+  height: 400px; /* A térkép magassága */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 2px solid #333;
+}
+
+/* A Google Map-re ráteszünk egy szürkés szűrőt, hogy menőbb legyen (opcionális) */
+.map-column iframe {
+  filter: grayscale(100%) invert(90%); /* Sötét térkép hatás */
+  transition: filter 0.3s;
+}
+
+.map-column iframe:hover {
+  filter: none; /* Ha ráviszed az egeret, színes lesz */
+}
+
+/* --- COPYRIGHT SÁV --- */
+.footer-bar {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.social-links span {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #fff;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #ffffff;  
-  animation: floatPulse 3s ease-in-out infinite;
+  transition: color 0.3s;
 }
 
-@keyframes floatPulse {
-  0%   { transform: translateY(0); opacity: 0.95; }
-  50%  { transform: translateY(-6px); opacity: 1; }
-  100% { transform: translateY(0); opacity: 0.95; }
+.social-links span:hover {
+  color: #f39c12;
 }
 
-.elerhetosegek-text {
-  font-size: 18px;
-  margin: 5px 0;
-  color: #ffffff; 
+/* Mobil nézet */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+  
+  .map-column {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .footer-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
