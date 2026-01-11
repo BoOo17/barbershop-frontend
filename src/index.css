@@ -70,27 +70,23 @@ button:focus-visible {
     background-color: #ffffff;
   }
 }
-/* Reset mindenre */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fullscreen body és root */
 html, body, #root {
   height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
   background-color: #515151;
 }
-/* Foglalás gomb hover */
 button:nth-of-type(1):hover {
   background-color: #000000;
   transform: scale(1.1);
 }
 
-/* Lemondás gomb hover */
 button:nth-of-type(2):hover {
   background-color: #c0392b;
   transform: scale(1.1);

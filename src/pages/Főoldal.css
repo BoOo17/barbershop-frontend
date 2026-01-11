@@ -2,24 +2,19 @@
 .hero-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Teljes képernyő magasság */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
   
-  /* HÁTTÉRKÉP BEÁLLÍTÁSA */
-  /* Ha van képed az assets mappában, írd át az útvonalat! */
-  /* Ha nincs kép, ez a sötét szín marad */
   background: #222 url('../assets/hero-bg.jpg') no-repeat center center/cover;
   
-  /* Hogy ne csússzon el a fejléc miatt */
   margin-top: -80px; 
   padding-top: 80px;
 }
 
-/* Sötétítő réteg (Overlay) - Hogy olvasható legyen a szöveg */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -30,30 +25,27 @@
   z-index: 1;
 }
 
-/* A tartalom doboza (hogy a réteg felett legyen) */
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 20px;
-  animation: fadeInUp 1s ease-out; /* Beúszó animáció */
+  animation: fadeInUp 1s ease-out;
 }
 
-/* Díszítő felirat */
 .hero-badge {
   display: inline-block;
   font-size: 0.9rem;
   letter-spacing: 4px;
-  color: #f39c12; /* Arany szín */
+  color: #f39c12;
   margin-bottom: 20px;
   font-weight: bold;
   border-bottom: 1px solid #f39c12;
   padding-bottom: 5px;
 }
 
-/* Főcím */
 h1 {
-  font-size: 3.5rem; /* Hatalmas betűk */
+  font-size: 3.5rem;
   line-height: 1.2;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -62,10 +54,9 @@ h1 {
 }
 
 .highlight {
-  color: #f39c12; /* Arany kiemelés a szövegben */
+  color: #f39c12;
 }
 
-/* Alcím */
 .hero-subtitle {
   font-size: 1.2rem;
   color: #ddd;
@@ -76,7 +67,6 @@ h1 {
   margin-right: auto;
 }
 
-/* --- GOMBOK --- */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -84,7 +74,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-/* 1. Elsődleges gomb (Foglalás) - Tele színnel */
 .btn-primary {
   background-color: #f39c12;
   color: white;
@@ -106,7 +95,6 @@ h1 {
   box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
 }
 
-/* 2. Másodlagos gomb (Lemondás) - Átlátszó, kerettel */
 .btn-secondary {
   background-color: transparent;
   color: white;
@@ -126,7 +114,6 @@ h1 {
   background-color: rgba(255,255,255,0.1);
 }
 
-/* Beúszó animáció definíciója */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -138,7 +125,6 @@ h1 {
   }
 }
 
-/* Mobil nézet */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;

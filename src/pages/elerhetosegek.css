@@ -1,5 +1,3 @@
-/* src/pages/Elerhetosegek.css */
-
 .contact-wrapper {
   width: 100%;
   max-width: 1200px;
@@ -9,15 +7,14 @@
 
 .contact-content {
   display: flex;
-  flex-wrap: wrap; /* Hogy mobilon egymás alá kerüljenek */
+  flex-wrap: wrap;
   gap: 50px;
   margin-bottom: 40px;
-  align-items: flex-start; /* Fentre igazítva */
+  align-items: flex-start;
 }
 
-/* --- BAL OSZLOP (INFÓK) --- */
 .info-column {
-  flex: 1; /* Foglalja el a hely felét */
+  flex: 1;
   min-width: 300px;
 }
 
@@ -25,7 +22,7 @@
   font-size: 2.5rem;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #f39c12; /* Arany cím */
+  color: #f39c12;
 }
 
 .contact-desc {
@@ -62,10 +59,9 @@
   color: #ccc;
 }
 
-/* Nyitvatartás */
 .opening-hours {
   margin-top: 30px;
-  background: rgba(255,255,255,0.05); /* Halvány háttér */
+  background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 10px;
 }
@@ -94,28 +90,25 @@
   border: none;
 }
 
-/* --- JOBB OSZLOP (TÉRKÉP) --- */
 .map-column {
   flex: 1;
   min-width: 300px;
-  height: 400px; /* A térkép magassága */
+  height: 400px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   border: 2px solid #333;
 }
 
-/* A Google Map-re ráteszünk egy szürkés szűrőt, hogy menőbb legyen (opcionális) */
 .map-column iframe {
-  filter: grayscale(100%) invert(90%); /* Sötét térkép hatás */
+  filter: grayscale(100%) invert(90%);
   transition: filter 0.3s;
 }
 
 .map-column iframe:hover {
-  filter: none; /* Ha ráviszed az egeret, színes lesz */
+  filter: none;
 }
 
-/* --- COPYRIGHT SÁV --- */
 .footer-bar {
   border-top: 1px solid #444;
   padding-top: 20px;

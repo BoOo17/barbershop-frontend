@@ -1,4 +1,3 @@
-// src/pages/Rolunk.jsx
 import React from 'react';
 import './Rolunk.css';
 
@@ -6,7 +5,6 @@ const Rolunk = () => {
   return (
     <div className="rolunk-container">
       
-      {/* CÍMSOR ÉS BEVEZETŐ */}
       <div className="rolunk-header">
         <h2>Kik Vagyunk?</h2>
         <div className="divider-small"></div>
@@ -15,8 +13,7 @@ const Rolunk = () => {
           Nálunk nem sietünk: dőlj hátra, és élvezd a gondoskodó kezek munkáját egy barátságos környezetben.
         </p>
       </div>
-
-      {/* 3 KÁRTYA A LÉNYEGRŐL */}
+      
       <div className="features-grid">
         
         <div className="feature-card">

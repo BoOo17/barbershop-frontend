@@ -14,7 +14,6 @@
 
 .modal-content {
   background-color: #c6c6c6;
-  /* Kisebb belső margó a kompaktságért */
   padding: 30px; 
   border-radius: 15px;
   width: 90%;
@@ -61,7 +60,7 @@
   cursor: pointer;
   color: #ffffff;
   line-height: 1;
-  z-index: 10; /* Hogy görgetéskor is kattintható maradjon */
+  z-index: 10;
 }
 
 .close-btn:hover {

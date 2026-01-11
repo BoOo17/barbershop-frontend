@@ -1,13 +1,9 @@
-// src/pages/Képek.jsx
 import React, { useState } from 'react';
 import './Képek.css';
 
 const Képek = () => {
-  // Ez tárolja, hogy épp melyik barber ID-ja van kiválasztva.
-  // Ha null, akkor senkié nincs nyitva.
   const [activeBarber, setActiveBarber] = useState(null);
 
-  // ADATOK (Itt állítsd be a saját képeket később)
   const galleryData = [
     {
       id: 1,
@@ -50,12 +46,11 @@ const Képek = () => {
     }
   ];
 
-  // Ez a függvény fut le kattintáskor
   const toggleGallery = (id) => {
     if (activeBarber === id) {
-      setActiveBarber(null); // Ha már nyitva volt, bezárjuk
+      setActiveBarber(null); 
     } else {
-      setActiveBarber(id); // Kinyitjuk az újat (a többi automatikusan bezáródik)
+      setActiveBarber(id); 
     }
   };
 
@@ -64,7 +59,6 @@ const Képek = () => {
       <h2>Munkáink</h2>
       <p className="subtitle">Válassz egy borbélyt a referencia munkák megtekintéséhez!</p>
 
-      {/* 1. A VÁLASZTÓ FEJLÉC (Borbélyok fejei) */}
       <div className="barber-selectors">
         {galleryData.map((barber) => (
           <div 
@@ -76,16 +70,13 @@ const Képek = () => {
               <img src={barber.avatar} alt={barber.name} />
             </div>
             <span className="selector-name">{barber.name}</span>
-            {/* Kis nyíl lefelé, ha aktív */}
             {activeBarber === barber.id && <div className="arrow-down"></div>}
           </div>
         ))}
       </div>
 
-      {/* 2. A LENYÍLÓ GALÉRIA ABLAK */}
       <div className="gallery-display-area">
         {galleryData.map((barber) => (
-          // Csak akkor jelenítjük meg, ha ő az aktív
           activeBarber === barber.id && (
             <div key={barber.id} className="portfolio-grid fade-in">
               {barber.works.map((imgUrl, index) => (
@@ -97,7 +88,6 @@ const Képek = () => {
           )
         ))}
         
-        {/* Ha nincs senki kiválasztva, kiírhatunk valamit (opcionális) */}
         {!activeBarber && (
           <p className="placeholder-text">Kattints az egyik barberunkra fentről!</p>
         )}

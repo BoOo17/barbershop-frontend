@@ -13,13 +13,13 @@
 }
 
 .modal-box {
-  background: #e60000; /* erős piros */
+  background: #e60000;
   padding: 30px;
   border-radius: 12px;
   text-align: center;
   width: 320px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  color: white; /* fehér szöveg */
+  color: white;
 }
 
 .modal-box h2 {

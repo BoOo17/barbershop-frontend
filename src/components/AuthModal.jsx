@@ -4,7 +4,6 @@ import './AuthModal.css';
 const AuthModal = ({ onClose }) => {
   const [isLogin, setIsLogin] = useState(true);
 
-  // Űrlap adatok tárolása
   const [formData, setFormData] = useState({
     lastname: '',
     firstname: '',
@@ -14,32 +13,27 @@ const AuthModal = ({ onClose }) => {
     confirmPassword: ''
   });
 
-  // Hibaüzenet tárolása (ha nem egyezik a jelszó)
   const [error, setError] = useState('');
 
-  // Mezők változásának kezelése
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
-    // Ha ír a felhasználó, töröljük a korábbi hibaüzenetet
     setError('');
   };
 
-  // Beküldés kezelése
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Ne töltődjön újra az oldal
 
-    // Ha regisztráció van, ellenőrizzük a jelszavakat
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     if (!isLogin) {
       if (formData.password !== formData.confirmPassword) {
         setError('A két jelszó nem egyezik meg!');
-        return; // Itt megáll a futás, nem enged tovább
+        return; 
       }
     }
 
-    // Ha minden oké, itt történne a backend hívás
     console.log('Sikeres űrlap küldés:', formData);
     alert('Sikeres művelet!');
     onClose();
@@ -64,12 +58,10 @@ const AuthModal = ({ onClose }) => {
             : 'Add meg adataidat a regisztrációhoz!'}
         </p>
 
-        {/* HIBAÜZENET MEGJELENÍTÉSE */}
         {error && <div className="error-message">{error}</div>}
         
         <form className="auth-form" onSubmit={handleSubmit}>
           
-          {/* --- CSAK REGISZTRÁCIÓNÁL --- */}
           {!isLogin && (
             <>
               <div className="name-row">
@@ -108,7 +100,6 @@ const AuthModal = ({ onClose }) => {
             </>
           )}
 
-          {/* --- KÖZÖS MEZŐK --- */}
           <div className="form-group">
             <label>Email cím</label>
             <input 
@@ -131,7 +122,6 @@ const AuthModal = ({ onClose }) => {
             />
           </div>
 
-          {/* JELSZÓ MEGERŐSÍTÉS (Csak regisztrációnál) */}
           {!isLogin && (
             <div className="form-group">
               <label>Jelszó megerősítése</label>

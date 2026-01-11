@@ -1,8 +1,6 @@
-// src/pages/Barberek.jsx
 import React from 'react';
 import './Barberek.css';
 
-// Fogadjuk az onOpenAuth prop-ot a gombhoz
 const Barberek = ({ onOpenAuth }) => {
   const barbers = [
     {
@@ -46,8 +44,6 @@ const Barberek = ({ onOpenAuth }) => {
               <span className="role">{barber.role}</span>
               <p>{barber.desc}</p>
               
-              {/* --- ÚJ GOMB --- */}
-              {/* Ha rákattint, megnyitja a foglaló ablakot */}
               <button className="book-barber-btn" onClick={onOpenAuth}>
                 Időpontfoglalás
               </button>
