@@ -15,7 +15,7 @@ const Elerhetosegek = () => {
             <span className="icon">📍</span>
             <div>
               <h3>Címünk</h3>
-              <p>1052 Budapest, Deák Ferenc tér 3.</p>
+              <p>Győr, Egyetem tér 1, 9026</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ const Elerhetosegek = () => {
         <div className="map-column">
           <iframe 
             title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.666838302068!2d19.0520967!3d47.4960309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc41b36965f9%3A0x6a0256e0d376510!2sBudapest%2C%20De%C3%A1k%20Ferenc%20t%C3%A9r!5e0!3m2!1shu!2shu!4v1700000000000!5m2!1shu!2shu" 
+            src="https://www.google.com/maps/place/Széchenyi+István+Egyetem/@47.6933064,17.6249578,567m/data=!3m2!1e3!4b1!4m6!3m5!1s0x476bbfdfda327c3b:0xd0538eef80041623!8m2!3d47.6933064!4d17.6275327!16s%2Fm%2F09gmw59?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -61,7 +61,7 @@ const Elerhetosegek = () => {
       </div>
 
       <div className="footer-bar">
-        <p>&copy; 2024 BarberShop. Minden jog fenntartva.</p>
+        <p>&copy; 2024 BarberShop.</p>
         <div className="social-links">
           <span>Facebook</span>
           <span>Instagram</span>
